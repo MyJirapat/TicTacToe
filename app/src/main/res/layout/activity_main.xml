@@ -10,14 +10,14 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Tic Tac Toe"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"
         android:gravity="center"
         android:padding="5dp"
+        android:text="Tic Tac Toe"
         android:textAlignment="center"
         android:textColor="@color/black"
-        android:textSize="30sp" />
+        android:textSize="50sp" />
 
     <Button
         android:layout_width="wrap_content"

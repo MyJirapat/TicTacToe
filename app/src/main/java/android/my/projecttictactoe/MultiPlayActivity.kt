@@ -15,9 +15,9 @@ import kotlin.math.sin
 import kotlin.system.exitProcess
 
 
-var playerTurn = true
+var PlayerTurn = true
 
-class GamePlayActivity : AppCompatActivity() {
+class MultiPlayActivity: AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,7 +31,7 @@ class GamePlayActivity : AppCompatActivity() {
     var player2Count = 0
     fun clickfun(view:View)
     {
-        if(playerTurn) {
+        if(PlayerTurn) {
             val but = view as Button
             var cellID = 0
             //Toast.makeText(this,but.id.toString() , Toast.LENGTH_SHORT).show();
@@ -75,16 +75,13 @@ class GamePlayActivity : AppCompatActivity() {
                 Handler().postDelayed(Runnable{robot()},500)
             }
 
-            //activeUser = 2
-            activeUser = 1
+            activeUser = 2
+            //activeUser = 1
 
         } else {
             buttonSelected.text = "O"
-            //audio.start()
             buttonSelected.setTextColor(Color.parseColor("#D22BB804"))
-            //Handler().postDelayed(Runnable { audio.pause() } , 500)
-            //activeUser = 1
-            activeUser = 2
+            activeUser = 1
             player2.add(currCell)
             emptyCells.add(currCell)
             // Handler().postDelayed(Runnable { audio.release() } , 200)
@@ -104,7 +101,7 @@ class GamePlayActivity : AppCompatActivity() {
             player1.contains(3)&&player1.contains(5)&&player1.contains(7) || (player1.contains(2)&&player1.contains(5) && player1.contains(8))) {
             player1Count+=1
             buttonDisable()
-            //   audio.start()
+            // audio.start()
             disableReset()
             //   Handler().postDelayed(Runnable { audio.release() } , 4000)
             val build = AlertDialog.Builder(this)
@@ -256,4 +253,3 @@ class GamePlayActivity : AppCompatActivity() {
         Handler().postDelayed(Runnable { button10.isEnabled = true } , 2200)
     }
 }
-
