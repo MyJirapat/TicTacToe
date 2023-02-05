@@ -122,7 +122,6 @@ class GamePlayActivity : AppCompatActivity() {
             Handler().postDelayed(Runnable { build.show() } , 2000)
             return 1
 
-
         }
         else if((player2.contains(1) && player2.contains(2) && player2.contains(3) ) || (player2.contains(1) && player2.contains(4) && player2.contains(7))||
             (player2.contains(3) && player2.contains(6) && player2.contains(9)) || (player2.contains(7) && player2.contains(8) && player2.contains(9))||

@@ -24,13 +24,13 @@ class MultiPlayActivity: AppCompatActivity() {
         setContentView(R.layout.activity_game_play)
         button10.setOnClickListener {
             reset()
-
         }
     }
     var player1Count = 0
     var player2Count = 0
-    fun clickfun(view:View)
-    {
+
+    fun clickfun(view:View) {
+
         if(PlayerTurn) {
             val but = view as Button
             var cellID = 0
@@ -67,7 +67,7 @@ class MultiPlayActivity: AppCompatActivity() {
             emptyCells.add(currCell)
 
             buttonSelected.isEnabled = false
-            // Handler().postDelayed(Runnable { audio.release() } , 200)
+
             val checkWinner = playerwinner()
             if(checkWinner == 1){
                 Handler().postDelayed(Runnable { reset() } , 2000)
@@ -92,41 +92,41 @@ class MultiPlayActivity: AppCompatActivity() {
         }
 
     }
-    fun playerwinner():Int
-    {
-        //val audio = MediaPlayer.create(this , R.raw.success)
+    // Find the winner between X or O
+    fun playerwinner():Int {
+
         if((player1.contains(1) && player1.contains(2) && player1.contains(3) ) || (player1.contains(1) && player1.contains(4) && player1.contains(7))||
             (player1.contains(3) && player1.contains(6) && player1.contains(9)) || (player1.contains(7) && player1.contains(8) && player1.contains(9))||
             (player1.contains(4)&&player1.contains(5)&&player1.contains(6)) || (player1.contains(1)&&player1.contains(5) && player1.contains(9))||
             player1.contains(3)&&player1.contains(5)&&player1.contains(7) || (player1.contains(2)&&player1.contains(5) && player1.contains(8))) {
             player1Count+=1
             buttonDisable()
-            // audio.start()
             disableReset()
-            //   Handler().postDelayed(Runnable { audio.release() } , 4000)
+
             val build = AlertDialog.Builder(this)
             build.setTitle("Game Over")
             build.setMessage("Player 1 Wins!!" + "\n\n" + "Do you want to play again")
             build.setPositiveButton("Ok") { dialog, which ->
                 reset()
-                //   audio.release()
             }
             build.setNegativeButton("Exit") { dialog, which ->
-                //  audio.release()
                 exitProcess(1)
-
             }
             Handler().postDelayed(Runnable { build.show() } , 2000)
             return 1
-
-
         }
-        else if((player2.contains(1) && player2.contains(2) && player2.contains(3) ) || (player2.contains(1) && player2.contains(4) && player2.contains(7))||
-            (player2.contains(3) && player2.contains(6) && player2.contains(9)) || (player2.contains(7) && player2.contains(8) && player2.contains(9))||
-            (player2.contains(4)&&player2.contains(5)&&player2.contains(6)) || (player2.contains(1)&&player2.contains(5) && player2.contains(9))||
-            player2.contains(3)&&player2.contains(5)&&player2.contains(7) || (player2.contains(2)&&player2.contains(5) && player2.contains(8))){
+        else if ((player2.contains(1) && player2.contains(2) && player2.contains(3))||
+                (player2.contains(1) && player2.contains(4) && player2.contains(7))||
+                (player2.contains(3) && player2.contains(6) && player2.contains(9)) ||
+                (player2.contains(7) && player2.contains(8) && player2.contains(9))||
+                (player2.contains(4)&&player2.contains(5)&&player2.contains(6)) ||
+                (player2.contains(1)&&player2.contains(5) && player2.contains(9))||
+                 player2.contains(3)&&player2.contains(5)&&player2.contains(7) ||
+                (player2.contains(2)&&player2.contains(5) && player2.contains(8)))
+
+        {
             player2Count+=1
-            //audio.start()
+
             buttonDisable()
             disableReset()
             //   Handler().postDelayed(Runnable { audio.release() } , 4000)
@@ -210,9 +210,6 @@ class MultiPlayActivity: AppCompatActivity() {
                 else -> {button}
             }
             emptyCells.add(rnd);
-            //   val audio = MediaPlayer.create(this , R.raw.poutch)
-            //  audio.start()
-            //Handler().postDelayed(Runnable { audio.release() } , 500)
             buttonselected.text = "O"
             buttonselected.setTextColor(Color.parseColor("#D22BB804"))
             player2.add(rnd)
@@ -247,8 +244,8 @@ class MultiPlayActivity: AppCompatActivity() {
         }
     }
 
-    fun disableReset()
-    {
+    fun disableReset() {
+
         button10.isEnabled = false
         Handler().postDelayed(Runnable { button10.isEnabled = true } , 2200)
     }
