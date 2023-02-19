@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <TableLayout
+
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -13,6 +15,19 @@
         android:layout_height="20dp"
         android:layout_margin="10dp"
         android:gravity="center">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Multi Player"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="50sp" />
 
         <TextView
             android:id="@+id/textView"
@@ -159,6 +174,7 @@
     </LinearLayout>
 
 </TableLayout>
+
 
 
 

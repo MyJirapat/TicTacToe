@@ -90,7 +90,6 @@ class MultiPlayActivity: AppCompatActivity() {
             if(checkWinner == 1)
                 Handler().postDelayed(Runnable { reset() } , 4000)
         }
-
     }
 
     fun robot() {
@@ -119,7 +118,6 @@ class MultiPlayActivity: AppCompatActivity() {
             var checkWinner = playerwinner()
             if(checkWinner == 1)
                 Handler().postDelayed(Runnable { reset() } , 2000)
-
         }
     }
 

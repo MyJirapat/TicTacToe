@@ -1,14 +1,13 @@
 package android.my.projecttictactoe
 
 import android.content.Intent
-import android.media.MediaPlayer
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import kotlinx.android.synthetic.main.activity_main.*
 
-var singleUser = false
+/*var singleUser = false
 //var multiUser = false
 class MainActivity : AppCompatActivity() {
     lateinit var singlePlayerBtn: Button
@@ -17,7 +16,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-       // singlePlayerBtn = findViewById(R.id.idBtnSinglePlayer)
+        // singlePlayerBtn = findViewById(R.id.idBtnSinglePlayer)
         //multiPlayerBtn = findViewById(R.id.idBtnMultiPlayer)
         idBtnSinglePlayer.setOnClickListener{
             singleUser = true
@@ -26,8 +25,8 @@ class MainActivity : AppCompatActivity() {
 
         idBtnMultiPlayer.setOnClickListener{
             singleUser = false
-           // multiUser = true
-           // startActivity(Intent(this, GamePlayActivity::class.java))
+            // multiUser = true
+            // startActivity(Intent(this, GamePlayActivity::class.java))
             startActivity(Intent(this, MultiPlayActivity::class.java))
 
         }
@@ -35,7 +34,7 @@ class MainActivity : AppCompatActivity() {
     override fun onBackPressed() {
         ActivityCompat.finishAffinity(this)
     }
-}
+}*/
 
 /*goToSecond.setOnClickListener {
     val name = inputName.text.toString()
