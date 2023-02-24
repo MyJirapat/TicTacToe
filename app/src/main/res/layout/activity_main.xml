@@ -7,6 +7,18 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <Button
+        android:id="@+id/idBtnMultiPlayer2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/idTVHead"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="300dp"
+        android:text="Multiplayer"
+        android:textAllCaps="false"
+
+        tools:ignore="UnknownId" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -33,15 +45,28 @@
         tools:ignore="UnknownId" />
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="120dp"
         android:layout_height="wrap_content"
-        android:text="Multi Player"
+        android:text="Multiplayer"
         android:textAllCaps="false"
         android:id="@+id/idBtnMultiPlayer"
         android:layout_below="@+id/idTVHead"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="300dp"
 
+        tools:ignore="UnknownId" />
+
+
+    <Button
+        android:id="@+id/idOnline"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/idTVHead"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="400dp"
+        android:text="Online"
+
+        android:textAllCaps="false"
 
         tools:ignore="UnknownId" />
 

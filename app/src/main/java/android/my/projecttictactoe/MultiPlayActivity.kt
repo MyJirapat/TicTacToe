@@ -21,7 +21,7 @@ class MultiPlayActivity: AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_game_play)
+        setContentView(R.layout.activity_multi_play)
         button10.setOnClickListener {
             reset()
         }
