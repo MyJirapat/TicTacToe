@@ -31,13 +31,23 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, MultiPlayActivity::class.java))
 
         }
+
+        /*
+        idOnline.setOnClickListener{
+            single = false
+            startActivity(Intent(this, OnlinePlayActivity::class.java))
+        }
+        */
     }
     override fun onBackPressed() {
         ActivityCompat.finishAffinity(this)
     }
 }
 
-/*goToSecond.setOnClickListener {
+/*
+   goToSecond.setOnClickListener {
     val name = inputName.text.toString()
     val intent = Intent(this, SecondActivity::class.java)
-    intent.putExtra("NAME", name)*/
+    intent.putExtra("NAME", name)
+
+    */

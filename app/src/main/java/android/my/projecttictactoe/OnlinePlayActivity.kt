@@ -11,6 +11,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.core.os.HandlerCompat.postDelayed
 import androidx.core.os.postDelayed
 import kotlinx.android.synthetic.main.activity_game_play.*
+import kotlinx.android.synthetic.main.activity_online_play.*
 import kotlin.math.sin
 import kotlin.system.exitProcess
 //import com.google.firebase.database.*
@@ -22,9 +23,12 @@ var checkTemp = true
 var keyValue:String = "null"
 
 class OnlinePlayActivity : AppCompatActivity() {
-  /*  override fun onCreate(savedInstanceState: Bundle?) {
+  /* override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_code)
+        setContentView(R.layout.activity_online_play)
+      // setContentView(R.layout.activity_code)
+
+
         Create.setOnClickListener{
             code = "null";
             codeFound = false
@@ -41,7 +45,7 @@ class OnlinePlayActivity : AppCompatActivity() {
                 isCodeMaker = true;
                 FirebaseDatabase.getInstance().reference.child("codes").addValueEventListener(object  :ValueEventListener{
                     override fun onCancelled(error: DatabaseError) {
-                        TODO("Not yet implemented")
+                       // TODO("Not yet implemented")
                     }
 
                     override fun onDataChange(snapshot: DataSnapshot) {
