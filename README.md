@@ -5,3 +5,7 @@ The player who succeeds in placing three of their marks in a horizontal, vertica
 
 ![On Game](https://user-images.githubusercontent.com/74519762/220845261-7894fec3-0a4b-4b3e-acdd-779526827667.PNG) ![WinOOO](https://user-images.githubusercontent.com/74519762/220845467-5d89e6b5-a389-4593-ab73-9fab47f4f84a.PNG)
 
+Work Flow
+![Tictactoe](https://user-images.githubusercontent.com/74519762/231422741-3b01b2e5-b5cb-4e12-b76e-3c32bb1c2080.PNG)
+
+
