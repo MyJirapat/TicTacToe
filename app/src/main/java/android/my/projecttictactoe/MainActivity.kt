@@ -29,9 +29,7 @@ class MainActivity : AppCompatActivity() {
            // multiUser = true
            // startActivity(Intent(this, GamePlayActivity::class.java))
             startActivity(Intent(this, MultiPlayActivity::class.java))
-
         }
-
         /*
         idOnline.setOnClickListener{
             single = false
@@ -43,11 +41,3 @@ class MainActivity : AppCompatActivity() {
         ActivityCompat.finishAffinity(this)
     }
 }
-
-/*
-   goToSecond.setOnClickListener {
-    val name = inputName.text.toString()
-    val intent = Intent(this, SecondActivity::class.java)
-    intent.putExtra("NAME", name)
-
-    */

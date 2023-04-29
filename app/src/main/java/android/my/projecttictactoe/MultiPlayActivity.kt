@@ -23,7 +23,7 @@ class MultiPlayActivity: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_multi_play)
         button10.setOnClickListener {
-            reset()
+            clear()
         }
     }
     var player1Count = 0
@@ -70,7 +70,7 @@ class MultiPlayActivity: AppCompatActivity() {
 
             val checkWinner = playerwinner()
             if(checkWinner == 1){
-                Handler().postDelayed(Runnable { reset() } , 2000)
+                Handler().postDelayed(Runnable { clear() } , 2000)
             } else if (singleUser){
                 Handler().postDelayed(Runnable{robot()},500)
             }
@@ -88,7 +88,7 @@ class MultiPlayActivity: AppCompatActivity() {
             buttonSelected.isEnabled = false
             val checkWinner  = playerwinner()
             if(checkWinner == 1)
-                Handler().postDelayed(Runnable { reset() } , 4000)
+                Handler().postDelayed(Runnable { clear() } , 4000)
         }
     }
 
@@ -117,17 +117,24 @@ class MultiPlayActivity: AppCompatActivity() {
             buttonselected.isEnabled = false
             var checkWinner = playerwinner()
             if(checkWinner == 1)
-                Handler().postDelayed(Runnable { reset() } , 2000)
+                Handler().postDelayed(Runnable { clear() } , 2000)
         }
     }
 
     // Find the winner between X or O
     fun playerwinner():Int {
 
-        if((player1.contains(1) && player1.contains(2) && player1.contains(3) ) || (player1.contains(1) && player1.contains(4) && player1.contains(7))||
-            (player1.contains(3) && player1.contains(6) && player1.contains(9)) || (player1.contains(7) && player1.contains(8) && player1.contains(9))||
-            (player1.contains(4)&&player1.contains(5)&&player1.contains(6)) || (player1.contains(1)&&player1.contains(5) && player1.contains(9))||
-            player1.contains(3)&&player1.contains(5)&&player1.contains(7) || (player1.contains(2)&&player1.contains(5) && player1.contains(8))) {
+        if(
+            (player1.contains(1) && player1.contains(2) && player1.contains(3))||
+            (player1.contains(1) && player1.contains(4) && player1.contains(7))||
+            (player1.contains(3) && player1.contains(6) && player1.contains(9))||
+            (player1.contains(7) && player1.contains(8) && player1.contains(9))||
+            (player1.contains(4)&&player1.contains(5)&&player1.contains(6))||
+            (player1.contains(1)&&player1.contains(5) && player1.contains(9))||
+            player1.contains(3)&&player1.contains(5)&&player1.contains(7)||
+            (player1.contains(2)&&player1.contains(5) && player1.contains(8)))
+
+        {
             player1Count+=1
             buttonDisable()
             disableReset()
@@ -136,7 +143,7 @@ class MultiPlayActivity: AppCompatActivity() {
             build.setTitle("Game Over")
             build.setMessage("Player 1 Wins!!" + "\n\n" + "Do you want to play again")
             build.setPositiveButton("Ok") { dialog, which ->
-                reset()
+                clear()
             }
             build.setNegativeButton("Exit") { dialog, which ->
                 exitProcess(1)
@@ -163,7 +170,7 @@ class MultiPlayActivity: AppCompatActivity() {
             build.setTitle("Game Over")
             build.setMessage("Player 2 Wins!!" + "\n\n" + "Do you want to play again")
             build.setPositiveButton("Ok"){dialog, which ->
-                reset()
+                clear()
                 // audio.release()
             }
             build.setNegativeButton("Exit"){dialog, which ->
@@ -180,7 +187,7 @@ class MultiPlayActivity: AppCompatActivity() {
             build.setTitle("Game Draw")
             build.setMessage("Nobody Wins" + "\n\n" + "Do you want to play again")
             build.setPositiveButton("Ok"){dialog, which ->
-                reset()
+                clear()
             }
             build.setNegativeButton("Exit"){dialog, which ->
                 exitProcess(1)
@@ -192,14 +199,12 @@ class MultiPlayActivity: AppCompatActivity() {
         return 0
     }
 
-    fun reset()
-    {
+    fun clear() {
         player1.clear()
         player2.clear()
         emptyCells.clear()
         activeUser = 1;
-        for(i in 1..9)
-        {
+        for(i in 1..9) {
             var buttonselected : Button?
             buttonselected = when(i){
                 1 -> button
@@ -220,40 +225,8 @@ class MultiPlayActivity: AppCompatActivity() {
         }
     }
 
- /*   fun robot() {
-        val rnd = (1..9).random()
-        if(emptyCells.contains(rnd))
-            robot()
-        else {
-            val buttonselected : Button?
-            buttonselected = when(rnd) {
-                1 -> button
-                2 -> button2
-                3 -> button3
-                4 -> button4
-                5 -> button5
-                6 -> button6
-                7 -> button7
-                8 -> button8
-                9 -> button9
-                else -> {button}
-            }
-            emptyCells.add(rnd);
-            buttonselected.text = "O"
-            buttonselected.setTextColor(Color.parseColor("#D22BB804"))
-            player2.add(rnd)
-            buttonselected.isEnabled = false
-            var checkWinner = playerwinner()
-            if(checkWinner == 1)
-                Handler().postDelayed(Runnable { reset() } , 2000)
-
-        }
-    }*/
-
-    fun buttonDisable()
-    {
-        for(i in 1..9)
-        {
+    fun buttonDisable() {
+        for(i in 1..9) {
             val buttonSelected = when(i)
             {
                 1 -> button
@@ -273,7 +246,6 @@ class MultiPlayActivity: AppCompatActivity() {
     }
 
     fun disableReset() {
-
         button10.isEnabled = false
         Handler().postDelayed(Runnable { button10.isEnabled = true } , 2200)
     }
