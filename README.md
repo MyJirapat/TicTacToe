@@ -6,7 +6,7 @@ The player who succeeds in placing three of their marks in a horizontal, vertica
 ![image](https://user-images.githubusercontent.com/74519762/232279062-d455da74-22ee-4861-9ea1-fbe987ae26d7.png)
 
 # Work Flow
-![Tictactoe](https://user-images.githubusercontent.com/74519762/231422741-3b01b2e5-b5cb-4e12-b76e-3c32bb1c2080.PNG)
+  ![Tictactoe](https://user-images.githubusercontent.com/74519762/231422741-3b01b2e5-b5cb-4e12-b76e-3c32bb1c2080.PNG)
 
 
 
