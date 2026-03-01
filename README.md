@@ -42,10 +42,21 @@ This project focuses on:
 
 ## 📂 Project Structure
 
+TicTacToe/
+ ├── app/
+ │   ├── src/main/java/
+ │   ├── res/layout/
+ │   ├── res/drawable/
+ │   └── AndroidManifest.xml
+ ├── build.gradle
+ └── settings.gradle
 
+---
+
+## 📂 TicTacToe UI
 ![image](https://user-images.githubusercontent.com/74519762/232279062-d455da74-22ee-4861-9ea1-fbe987ae26d7.png)
 
-# Work Flow
+# Workflow
   ![Tictactoe](https://user-images.githubusercontent.com/74519762/231422741-3b01b2e5-b5cb-4e12-b76e-3c32bb1c2080.PNG)
 
 
