@@ -42,14 +42,16 @@ This project focuses on:
 
 ## 📂 Project Structure
 
+```
 TicTacToe/
- ├── app/
- │   ├── src/main/java/
- │   ├── res/layout/
- │   ├── res/drawable/
- │   └── AndroidManifest.xml
- ├── build.gradle
- └── settings.gradle
+├── app/                          # Main Android application module
+│   ├── src/main/java/            # Kotlin source code
+│   ├── src/main/res/layout/      # UI layout XML files
+│   ├── src/main/res/drawable/    # Drawable resources
+│   └── src/main/AndroidManifest.xml
+├── build.gradle                  # Root Gradle configuration
+└── settings.gradle               # Project configuration
+```
 
 ---
 
