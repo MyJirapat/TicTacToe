@@ -1,7 +1,47 @@
 # TicTacToe
 
-Tic-tac-toe, or Xs and Os is a  well know popular paper-and-pencil game for two players who take turns marking the spaces in a three-by-three grid with X or O.
-The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row is the winner. 
+# 🎮 TicTacToe (Android - Kotlin)
+
+A modern implementation of the classic **Tic-Tac-Toe (X/O)** game built with **Kotlin** for Android.  
+This project demonstrates clean game logic implementation, UI state management, and interactive mobile design.
+
+---
+
+## 📱 Overview
+
+Tic-Tac-Toe is a two-player game where participants take turns marking spaces in a 3×3 grid with **X** or **O**.  
+The first player to align three marks horizontally, vertically, or diagonally wins the game.
+
+This project focuses on:
+
+- Game logic implementation
+- Turn-based state handling
+- Score tracking
+- Reset and replay functionality
+
+---
+
+## ✨ Features
+
+- Two-player local gameplay
+- Real-time win detection (row, column, diagonal)
+- Score tracking system
+- Game reset functionality
+- Clean and responsive UI
+- Written entirely in Kotlin
+
+---
+
+## 🛠️ Tech Stack
+
+- **Kotlin**
+- **Android SDK**
+- **Gradle**
+
+---
+
+## 📂 Project Structure
+
 
 ![image](https://user-images.githubusercontent.com/74519762/232279062-d455da74-22ee-4861-9ea1-fbe987ae26d7.png)
 
